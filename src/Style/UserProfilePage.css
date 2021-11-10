@@ -1,0 +1,61 @@
+body{
+    
+    
+   background-image: url(https://images.unsplash.com/photo-1635453669068-b0bccd14bc1c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1228&q=80);
+}
+
+ 
+ * {
+    font-family: 'Maven Pro', sans-serif;
+ }
+.main-container{
+    height: 200px;   
+}
+
+.user-main-div{
+    box-shadow:  5px 3px 8px rgb(0, 0, 0);
+    display: flex;
+    margin-left: 230px;
+    margin-top: -700px;
+}
+.user-img-div{    
+    width: 600px;    
+}
+
+.user-detail-div{
+    margin-right: 35px;
+    opacity: 0.7;
+    flex-grow: 1;
+    width: 65vw;
+    height: 45vh;
+    background: rgba(102, 102, 102, 0.945);
+    box-shadow: 0 4px 8px 0 rgba(199, 199, 199, 0.986);    
+}
+
+.user-detail-div:hover{
+    background: rgba(122, 122, 122, 0.973);
+    box-shadow:  0 2px 8px rgb(69, 0, 78);
+    opacity: 0.7;
+    text-decoration-color: rgb(0, 0, 0);
+}
+
+
+.profile-img{
+    width: 20rem;
+    height: 20rem;
+    margin-left: 65px;
+    margin-top: 0px;
+    border-radius: 50%;
+}
+
+.user-details{
+    border: 2px solid black ;
+    width: 50%;
+    height: 50%;
+    margin-left:  30vw;
+}
+
+.buttons {
+    margin-top: 10px;
+    margin-left: 900px;
+}
