@@ -36,8 +36,8 @@ function App() {
         <Route path="/Login" render={({ history }) => (
                     <Login history = {history}  userDetails = {userDetails}/>
                 )} />
-        <Route path="/Register" render={({history}) => (
-          <Register/>
+        <Route path="/Register" render={({ history }) => (
+          <Register history = {history} />
         )}/>
         <Route path="/Home" render={({history}) => (
           <Home history = {history}/>

@@ -41,21 +41,13 @@ function Register(props) {
         }
     }
 
-    function showConfirmPassError() {
-        console.log(confirmPassword)
-        if (password !== confirmPassword) {
-            setShowConfirmPassworderror(true)
-        }
-        else {
-            setShowConfirmPassworderror(false)
-        }
-    }
-
+    
     
 
     const onSubmit = async (e) => {
         e.preventDefault();
         if (password !== password2) {
+            console.log('in onsubmit')
             setShowConfirmPassworderror(true)
         }
         else {
@@ -77,6 +69,8 @@ function Register(props) {
                 console.log(newUser);
                 const body = JSON.stringify(newUser);
                 const res = await axios.post("http://localhost:3003/users", body, config);
+                console.log(props)
+                props.history.push('/Login')
             } catch (err) {
                 console.error(err);
             }
@@ -112,17 +106,16 @@ function Register(props) {
                     </div>
                     <div className='register-control'>
                         <label htmlFor="password" className="mx-2">Password</label>
-                        <input type='password' placeholder='Password' name='password' pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" value={password} onChange={onChange} onFocus={() => setShowPassworderror(true)} onBlur={showPassError} />
+                        <input type='password' placeholder='Password' name='password' pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" value={password} onChange={onChange}   />
                         {showPassworderror && <p className="errorText">Minimum 8 charaters with atleast one uppercase, one lowercase, one special charater and a number</p>}
                     </div>
                     <div className='register-control'>
                         <label htmlFor="password2" className="mx-2">Confirm Password</label>
-                        <input type='password' placeholder='Confirm Password' name='password2'  value={password2} onChange={onChange} onBlur={showConfirmPassError} />
+                        <input type='password' placeholder='Confirm Password' name='password2'  value={password2} onChange={onChange}  />
                         {showconfirmPassworderror && <p className="errorText">Password and Confirm Password should be same</p>}
                     </div>
                     <div>
                     <button className="login-btn" type='submit' value='Register' onChange={onChange} >Register</button>
-                        {registerSuccess && <p className="errorText">Successfully Registered <Link to="/Login">Login</Link></p>}
                     </div>
                     <div className="to-login">
                         <p>Already existing User? <Link to="/Login">Login</Link></p>

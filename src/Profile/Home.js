@@ -4,7 +4,7 @@ import Sidebar from './Sidebar';
 import Login from '../Login/Login'
 import { Link } from 'react-router-dom';
 import HomePge from '../Style/HomePage.css'
-import CarouselImage from '../Carousel/CarouselImage';
+
 
 function Home(props) {
 

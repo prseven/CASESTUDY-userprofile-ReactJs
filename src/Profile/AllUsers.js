@@ -68,7 +68,6 @@ function AllUsers(props) {
                 </tbody>
             </table>
             <div class="text-center">
-                {/* <Link class='btn btn-primary ' to={`/UserProfile/:`}> Go Back</Link> */}
                 <button class="btn btn-primary " type='submit' value='GoBack' onClick={() => GoBack(userid)}>Go Back</button>
 
             </div>
